@@ -1,34 +1,45 @@
-# Dynamic Markdown Blog Server
+# CentWise — Personal Finance Dashboard
 
-A local Python web application blog powered by Flask. It dynamically compiles raw Markdown files (`.md`) from a local folder directory into responsive HTML templates using an inline parsing parser, completely bypassing frontend JS dependencies.
+CentWise is a modern, responsive, and visual personal finance core application built on top of **React** and **Vite**. It features an obsidian-glassmorphic styling system with smooth transition micro-animations, designed to track expense histories and manage savings targets on the fly.
 
-## Installation & Running
-1. Install Flask package:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Start the local server engine:
-   ```bash
-   python app.py
-   ```
-   *The server runs locally on `http://localhost:8080`.*
+## Key Features
 
-## Adding New Articles
-To publish a new article:
-1. Create a new `.md` file inside the `posts/` folder.
-2. Structure the file with a YAML metadata header at the very top:
-   ```yaml
-   ---
-   title: My Article Title
-   date: 2026-06-05
-   tags: Python, Web
-   description: Summary description of the post details.
-   ---
-   # My Article Title
-   Write standard markdown contents here...
-   ```
+- 💸 **Transaction Logger**: Record income and expense items quickly. Includes automatic categorization tags.
+- 🎯 **Savings Target Goal**: Dynamic visual SVG progress ring to track how close you are to completing a set savings target. Add increments of cash instantly.
+- 🔍 **Realtime Search & Filter**: Filter transactions in the ledger history by description or category.
+- 🕒 **Active Digital Clock**: Displays current local time and date.
+- 💾 **Local Storage Sync**: Automatically persists your ledger history and current goals to the client browser's `localStorage` (no backend required).
+- 🌌 **Obsidian Glassmorphic UI**: Ultra-premium UI styling featuring glowing accents, glass filters, harmony palettes, and responsive layouts.
 
-## Features
-- **Dynamic Search & Filtering**: Index articles by tags or search phrases.
-- **Reading Time Counter**: Estimates minutes required based on content word count.
-- **Pure Server Rendering**: Lightweight HTML layout with CSS variables, zero frontend JS logic.
+## Technical Setup & Run Commands
+
+### Installation
+
+Clone the repository and install packages:
+
+```bash
+npm install
+```
+
+### Run Dev Server
+
+Launch Vite's hot-reload local development server:
+
+```bash
+npm run dev
+```
+
+### Build Production Bundle
+
+Verify types, syntax compilation, and build optimized production bundle:
+
+```bash
+npm run build
+```
+
+## Structure
+
+- `src/App.jsx`: Main UI dashboard core, transaction calculations, search logic, and state.
+- `src/App.css`: CentWise custom glassmorphism design variables, layouts, and animations.
+- `src/index.css`: Global body backdrop gradient gradients, typography config, and scrollbars.
+- `index.html`: Header metadata & font loading scripts.
